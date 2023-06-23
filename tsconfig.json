@@ -15,9 +15,8 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "types": [
-      "vite/client",
-      "@intlify/unplugin-vue-i18n/messages",
-      "typed-router.d.ts"
+      "vite/client"
+      // "typed-router.d.ts"
     ],
     "paths": {
       "@/*": ["./src/*"]
@@ -37,6 +36,5 @@
     "typed-router.d.ts",
     "components.d.ts",
     "components-global.d.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }

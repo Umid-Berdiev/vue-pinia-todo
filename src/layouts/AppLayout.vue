@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <RouterLink class="navbar-brand" to="/app">Todo</RouterLink>
+          <RouterLink class="navbar-brand" to="/">Todo</RouterLink>
           <button
             class="navbar-toggler"
             type="button"
@@ -17,10 +17,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <RouterLink class="nav-link" to="/app">Home Page</RouterLink>
-              <RouterLink class="nav-link" to="/app/todos"
-                >Todo Page</RouterLink
-              >
+              <RouterLink class="nav-link" to="/">Home Page</RouterLink>
+              <RouterLink class="nav-link" to="/todo">Todo Page</RouterLink>
             </div>
           </div>
         </div>

@@ -22,13 +22,6 @@ import { createApp } from "./main";
  */
 
 createApp().then(async (vueApp) => {
-  // restore pinia state from SSR if any
-  const initialState = window.__clientApp__;
-
-  if (typeof initialState?.pinia === "object") {
-    vueApp.pinia.state.value = initialState.pinia;
-  }
-
   // wait for the app to be ready
   await vueApp.router.isReady();
 

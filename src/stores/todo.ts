@@ -1,4 +1,4 @@
-import { TodoData } from "@/utils/constants";
+import { TodoData } from "@/utils/interfaces";
 import { defineStore } from "pinia";
 
 export const useTodoStore = defineStore("todoStore", () => {
@@ -16,7 +16,20 @@ export const useTodoStore = defineStore("todoStore", () => {
     const foundIndex = list.value.findIndex(
       (item: TodoData) => item.id === payload.id
     );
-    list.value.splice(foundIndex, 1, payload);
+    list.value.splice(foundIndex, 1, {
+      ...payload,
+      title: payload.title,
+    });
+  }
+
+  async function updateTodoStatus(payload: TodoData) {
+    const foundIndex = list.value.findIndex(
+      (item: TodoData) => item.id === payload.id
+    );
+    list.value.splice(foundIndex, 1, {
+      ...payload,
+      completed: !payload.completed,
+    });
   }
 
   async function deleteTodo(id: number) {
@@ -28,6 +41,7 @@ export const useTodoStore = defineStore("todoStore", () => {
     fetchList,
     addTodo,
     updateTodo,
+    updateTodoStatus,
     deleteTodo,
   } as const;
 });

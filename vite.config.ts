@@ -1,4 +1,3 @@
-import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
@@ -54,15 +53,12 @@ export default defineConfig({
 
   // Will be passed to @rollup/plugin-alias as its entries option.
   resolve: {
-    // alias: [
-    //   {
-    //     find: "@/",
-    //     replacement: `/src/`,
-    //   },
-    // ],
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
+    alias: [
+      {
+        find: "@/",
+        replacement: `/src/`,
+      },
+    ],
   },
 
   plugins: [
@@ -113,4 +109,14 @@ export default defineConfig({
 
     Icons(),
   ],
+
+  build: {
+    // minify: "terser",
+    // Do not warn about large chunks
+    chunkSizeWarningLimit: Infinity,
+    // Double the default size threshold for inlined assets
+    // https://vitejs.dev/config/build-options.html#build-assetsinlinelimit
+    assetsInlineLimit: 4096 * 2,
+    commonjsOptions: { include: [] },
+  },
 });

@@ -12,11 +12,12 @@ declare module '@vue/runtime-core' {
     AddTodo: typeof import('./src/components/AddTodo.vue')['default']
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
     AuthLayout: typeof import('./src/layouts/AuthLayout.vue')['default']
-    FilterTodos: typeof import('./src/components/FilterTodos.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    IFeatherCheck: typeof import('~icons/feather/check')['default']
+    IFeatherEdit: typeof import('~icons/feather/edit')['default']
+    IFeatherTrash: typeof import('~icons/feather/trash')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TodoList: typeof import('./src/components/TodoList.vue')['default']
-    Todos: typeof import('./src/components/Todos.vue')['default']
   }
 }
