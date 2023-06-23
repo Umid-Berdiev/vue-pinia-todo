@@ -1,0 +1,37 @@
+{
+  "select-language": "Tilni tanlang",
+  "auth": {
+    "title": "Hozir bizga qo'shiling.",
+    "subtitle": "Hisob yaratish bilan boshlang",
+    "label": {
+      "promotional": "Reklama taklifini oling"
+    },
+    "action": {
+      "login": "Menda allaqachon hisob bor",
+      "signup": "Roʻyxatdan oʻtish"
+    },
+    "placeholder": {
+      "name": "Ism",
+      "email": "E-mail manzili",
+      "password": "Parol",
+      "passwordCheck": "Parolni tekshirish"
+    },
+    "errors": {
+      "name": {
+        "required": "Ismingiz shart"
+      },
+      "email": {
+        "required": "Elektron pochtangizni kiriting, u avtorizatsiya uchun talab qilinadi",
+        "format": "Iltimos, to'g'ri e-pochta manzilini kiriting"
+      },
+      "password": {
+        "required": "Kamida 8 ta belgidan iborat parolni kiriting, u tizimga kirish uchun talab qilinadi",
+        "length": "Parol kamida 8 ta belgidan iborat bo'lishi kerak"
+      },
+      "passwordCheck": {
+        "required": "Parolingizni tasdiqlang",
+        "match": "Parol noto'g'ri"
+      }
+    }
+  }
+}
