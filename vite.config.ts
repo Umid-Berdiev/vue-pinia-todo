@@ -1,4 +1,3 @@
-import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import VueRouter from "unplugin-vue-router/vite";
@@ -39,15 +38,7 @@ export default defineConfig({
    * @see https://vitejs.dev/config/#optimizedeps-entries
    */
   optimizeDeps: {
-    include: [
-      "@iconify/iconify",
-      "@vueuse/core",
-      "axios",
-      "dayjs",
-      "notyf",
-      "vue",
-      "vue-i18n",
-    ],
+    include: ["@iconify/iconify", "@vueuse/core", "notyf", "vue"],
     disabled: false,
   },
 
