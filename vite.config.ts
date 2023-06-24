@@ -38,7 +38,7 @@ export default defineConfig({
    * @see https://vitejs.dev/config/#optimizedeps-entries
    */
   optimizeDeps: {
-    include: ["@iconify/iconify", "@vueuse/core", "notyf", "vue"],
+    include: ["@iconify/json", "@vueuse/core", "notyf", "vue"],
     disabled: false,
   },
 
